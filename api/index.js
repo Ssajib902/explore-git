@@ -8,8 +8,12 @@ function loadUsers2(){
 
 function displayUsers2(data){
         // console.log(data);
-        for(const user of data){
+        const ul = document.getElementById('users-list');
+        for (const user of data){
             console.log(user.name);
-            console.log(user.email);
+            const li = document.createElement('li');
+            li.innerText = user.name;
+            // li.innerText = user.email;
+            ul.appendChild(li);
         }
 }
